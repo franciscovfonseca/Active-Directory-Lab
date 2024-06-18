@@ -50,7 +50,7 @@ First, using Azure, create a Resource Group. Now, create 2 Virtual Machines(VMs)
 <br />
 
 
-Now for the image use Windows Server 2022. It is recommended for the size to use 2 vcpus.
+Now for the image use Windows Server 2022. It is recommended for the size to use 4 vcpus.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
