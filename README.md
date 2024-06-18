@@ -1,12 +1,15 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/3a1e74a2-4d7a-4395-9646-97f107b0ae4e" alt="Microsoft Active Directory Logo"/>
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 
+
 <h2>Description</h2>
 In this lab, we'll create two VMs in the same VNET—one as a Domain Controller (DC) with a static IP offering Active Directory services, and the other as a Client machine. The client will join the domain, and its DNS settings will be configured to use the DC as the primary DNS server. The project involves establishing an Active Directory system for centralized user credential oversight and network traffic management. By routing all internet traffic through the main server (Active Directory) via organization devices (Clients), administrators can monitor network activity and detect suspicious logs. Additionally, the project includes a PowerShell script to generate 1,000 users and showcases a device within the organization's domain, ensuring efficient management of user credentials and network traffic.
 <br />
+<br />
+
 
 <h2>Environments and Technologies Used</h2>
 
@@ -15,26 +18,34 @@ In this lab, we'll create two VMs in the same VNET—one as a Domain Controller 
 - Active Directory Domain Services
 - PowerShell
 
+<br />
+
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
 - Windows 10 (21H2)
 
+<br />
+
 <h2>Project Diagram</h2>
 
 <p align="center">
-<img src="https://i.imgur.com/BcRNcBi.png" height="50%" width="50%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/515cdb6d-7aa1-4806-b4a5-77ae9893bedb" height="50%" width="50%" alt="9"/><br />
 </p>
+<br />
 
 <h2>Step 1: Setup</h2>
 
 First, using Azure, create a Resource Group. Now, create 2 Virtual Machines(VMs). One will be the Domain Controller and the other will be the Client. To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before. 
 
-<img src="https://i.imgur.com/uYfHMQG.png" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/456a1394-bd3d-4ce8-945a-c1e23e4d897d" height="70%" width="70%" alt="9"/><br />
+<br />
+
 
 Now for the image use Windows Server 2022. It is recommended for the size to use 2 vcpus.
 
-<img src="https://i.imgur.com/FNoA7m0.png" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
+<br />
 
 Give the admin log in credentials that can be remembered or just write them down in notepad. Now, click "Next" until reaching the "Networking" tab. Take note of the "Virtual Network" created. This will be important when creating the Client VM. Check the box under Licensing then "Review and create" the VM.
 
