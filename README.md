@@ -44,18 +44,27 @@ Additionally, the project includes a PowerShell script to generate 1,000 users a
 
 <h2>Step 1: Setup</h2>
 
-First, using Azure, create a Resource Group. Now, create 2 Virtual Machines(VMs). One will be the Domain Controller and the other will be the Client. To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before. 
+First, using Azure, create a Resource Group.<br>
+Then, create 2 Virtual Machines(VMs).<br>
+One will be the Domain Controller and the other will be the Client.<br>
+To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before.
+
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/456a1394-bd3d-4ce8-945a-c1e23e4d897d" height="70%" width="70%" alt="9"/><br />
 <br />
 
 
-Now for the image use Windows Server 2022. It is recommended for the size to use 4 vcpus.
+Now for the image use Windows Server 2022.<br>
+It is recommended for the size to use 4 vcpus.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
 
-Give the admin log in credentials that can be remembered or just write them down in notepad. Now, click "Next" until reaching the "Networking" tab. Take note of the "Virtual Network" created. This will be important when creating the Client VM. Check the box under Licensing then "Review and create" the VM.
+Give the admin log in credentials that can be remembered or just write them down in notepad.<br>
+Then, click "Next" until reaching the "Networking" tab.<br>
+Take note of the "Virtual Network" created.<br>
+This will be important when creating the Client VM.<br>
+Check the box under Licensing then "Review and create" the VM.
 
 <img src="https://i.imgur.com/NxXFK16.png" height="70%" width="70%" alt="9"/><br />
 
