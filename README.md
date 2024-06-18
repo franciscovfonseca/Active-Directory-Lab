@@ -45,8 +45,8 @@ Additionally, the project includes a PowerShell script to generate 1,000 users a
 <h2>Step 1: Setup</h2>
 
 First, using Azure, create a Resource Group.<br>
-Then, create 2 Virtual Machines(VMs).<br>
-One will be the Domain Controller and the other will be the Client.<br>
+Then, create 2 Virtual Machines (VMs).<br>
+One will be the **Domain Controller** and the other will be the **Client**.<br>
 To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before.
 
 
@@ -54,27 +54,34 @@ To create the Domain Controller, give the VM a name as well as assign it to the 
 <br />
 
 
-Now for the image use Windows Server 2022.<br>
+Now for the Image use **Windows Server 2022**.<br>
 It is recommended for the size to use 4 vcpus.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
 
 Give the admin log in credentials that can be remembered or just write them down in notepad.<br>
-Then, click "Next" until reaching the "Networking" tab.<br>
-Take note of the "Virtual Network" created.<br>
+Then, click <b>*Next*<b> until reaching the **Networking** tab.<br>
+Take note of the Virtual Network created.<br>
 This will be important when creating the Client VM.<br>
-Check the box under Licensing then "Review and create" the VM.
+Check the box under Licensing then <b>*Review and create*<b> the VM.
 
-<img src="https://i.imgur.com/NxXFK16.png" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a5dbd18a-2b7a-433e-b101-07302f503a49" height="70%" width="70%" alt="9"/><br />
+<br />
 
-Now, create the Client VM. Same thing as the first one except the image should be using Windows 10.
+Now, create the Client VM.<br>
+Same thing as the first one except the image should be using **Windows 10**.
 
-<img src="https://i.imgur.com/2PvUCJN.png" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d9d106da-540a-487f-8cfa-97bf3955945d" height="70%" width="70%" alt="9"/><br />
+<br />
 
-Click, Next until reaching the Networking tab. Make sure the Virtual Network is the same as the Domain Controller. Now Review and create.
+Click *Next* until reaching the Networking tab.<br>
+Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
+Finally *Review and Create*.
 
-Now it's time to set the Domain Controller's NIC Private IP to static. Go to the Domain Controller and click on the "Networking" tab. Next, click on the "Network Interface."
+Now it's time to set the Domain Controller's NIC Private IP to **Static**:<br>
+Go to the Domain Controller and click on the "Networking" tab.<br>
+After that, click on the "Network Interface."
 
 <img src="https://i.imgur.com/6W2WZTA.png" height="60%" width="60%" alt="9"/><br />
 
