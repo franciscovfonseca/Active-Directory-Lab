@@ -44,9 +44,12 @@ Additionally, the project includes a PowerShell script to generate 1,000 users a
 
 <h2>Step 1: Setup</h2>
 
+
 First, using Azure, create a Resource Group.<br>
 Then, create 2 Virtual Machines (VMs).<br>
+
 One will be the **Domain Controller** and the other will be the **Client**.<br>
+
 To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before.
 
 
@@ -61,10 +64,11 @@ It is recommended for the size to use 4 vcpus.
 <br />
 
 Give the admin log in credentials that can be remembered or just write them down in notepad.<br>
-Then, click <b>*Next*<b> until reaching the **Networking** tab.<br>
-Take note of the Virtual Network created.<br>
-This will be important when creating the Client VM.<br>
-Check the box under Licensing then <b>*Review and create*<b> the VM.
+Then, click *Next* until reaching the **Networking** tab.<br>
+
+⚠️ Take note of the Virtual Network created: This will be important when creating the Client VM.<br>
+
+Check the box under Licensing then ***Review and Create*** the VM.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a5dbd18a-2b7a-433e-b101-07302f503a49" height="70%" width="70%" alt="9"/><br />
 <br />
@@ -75,45 +79,73 @@ Same thing as the first one except the image should be using **Windows 10**.
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d9d106da-540a-487f-8cfa-97bf3955945d" height="70%" width="70%" alt="9"/><br />
 <br />
 
-Click *Next* until reaching the Networking tab.<br>
-Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
-Finally *Review and Create*.
+Click *Next* until reaching the **Networking tab**.<br>
 
-Now it's time to set the Domain Controller's NIC Private IP to **Static**:<br>
-Go to the Domain Controller and click on the "Networking" tab.<br>
-After that, click on the "Network Interface."
+👉 Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
 
-<img src="https://i.imgur.com/6W2WZTA.png" height="60%" width="60%" alt="9"/><br />
+Finally ***Review and Create***.
 
-Now, go the "IP configurations" tab and click on the IP configuration. 
+<h2></h2>
+<br />
 
-<img src="https://i.imgur.com/0R53K7r.png" height="60%" width="60%" alt="9"/><br />
+Now it's time to set the Domain Controller's NIC Private IP to **Static**<br>
 
-Now, change the Allocation from "Dynamic" to "Static." Then click Save.
+Go to the Domain Controller and click on the **Networking** tab.<br>
+After that, click on the *Network Interface*.
 
-<img src="https://i.imgur.com/JAGBZtk.png" height="60%" width="60%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e702cc27-b53c-42af-b002-3a7ca8322992" height="60%" width="60%" alt="9"/><br />
+<br />
 
-Now, using the user and password created before, login to the Client with it's IP address in Remote Desktop Connection. 
+Now, go the **IP configurations** tab and click on the IP configuration. 
 
-<img src="https://i.imgur.com/28TrmKg.png" height="55%" width="55%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/2d248eb4-13d7-42de-9945-1aa600fdae1d" height="60%" width="60%" alt="9"/><br />
+<br />
 
-Now, using Command Prompt, ping the Domain Controller with it's Private IP Address. Type in "ping (Your DC Private IP) -t" to perpetually ping. For now it will time out.
+Now, change the *Allocation* from **Dynamic** to **Static**.<br>
+Then click ***Save***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8d3b0db5-68cc-4626-a552-f62aac7574a7" height="60%" width="60%" alt="9"/><br />
+<br />
+<h2></h2>
+<br />
+
+After that, using the **User** and **Password** created before, login to the Client with its IP address in **Remote Desktop Connection**. 
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/3b7d7c7d-c71f-4056-bccd-3999bdd4dc3d" height="55%" width="55%" alt="9"/><br />
+<br>
+
+Then, using **Command Prompt**, ping the Domain Controller with its Private IP Address.<br>
+Type in ***ping (Your DC Private IP) -t*** to perpetually ping.<br>
+
+For now it will time out.
 
 ```commandline
 ping 10.0.0.4 -t
 ```
 
-<img src="https://i.imgur.com/1zyrIUN.png" height="80%" width="80%" alt="9"/><br />
 
-Next its time to enable ICMPv4. First, login to the Domain Controller VM then open "Windows Defender Firewall with Advanced Security" 
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a9ac0069-9240-42ed-b61f-5606a900ec44" height="80%" width="80%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/bYkAEwk.png" height="85%" width="85%" alt="9"/><br />
+Following this, its time to enable **ICMPv4**.<br>
 
-Click on "Inbound Rules" and Sort by "Protocol". Look for the rules with "Core Networking Diagnostics - ICMP Echo Request(ICMPv4-In)" There will be two of them (Both on the bottom of the image below)
+First, login to the Domain Controller VM then open ***Windows Defender Firewall with Advanced Security***.
 
-<img src="https://i.imgur.com/EydkpVV.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d42ded65-aee3-4e87-bc61-a7b2b3050e50" height="85%" width="85%" alt="9"/><br />
+<br>
 
-Right-click and Enable both rules. Now go back to the Client VM and check on the command prompt. It should now be properly pinging the Domain Controller.
+Click on **Inbound Rules** and Sort by **Protocol**.<br>
+Look for the rules with ***Core Networking Diagnostics - ICMP Echo Request(ICMPv4-In)***.<br>
+
+There will be two of them *(Both at the bottom of the image below)*
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/67f09539-fc53-451f-82dc-cc0cd9a4d77d" height="80%" width="80%" alt="9"/><br />
+<br>
+
+Right-click and **Enable** both rules.<br>
+
+Now go back to the Client VM and check on the command prompt.<br>
+This time it should be properly pinging the Domain Controller.
 
 <img src="https://i.imgur.com/ENb2KyF.png" height="55%" width="55%" alt="9"/><br />
 
