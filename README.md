@@ -81,7 +81,7 @@ Same thing as the first one except the image should be using **Windows 10**.
 
 Click *Next* until reaching the **Networking tab**.<br>
 
-👉 Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
+➡️ Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
 
 Finally ***Review and Create***.
 
@@ -144,32 +144,48 @@ There will be two of them *(Both at the bottom of the image below)*
 
 Right-click and **Enable** both rules.<br>
 
-Now go back to the Client VM and check on the command prompt.<br>
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/83a47889-6fc4-40ec-aa6d-082ea4620238" height="55%" width="55%" alt="9"/><br />
+<br>
+
+Now go back to the **Client VM** and check on the *Command Prompt*.<br>
 This time it should be properly pinging the Domain Controller.
 
-<img src="https://i.imgur.com/ENb2KyF.png" height="55%" width="55%" alt="9"/><br />
-
-<img src="https://i.imgur.com/2YNRrzi.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/51bbc494-db1e-41c1-9f4c-6a84d55585b0" height="80%" width="80%" alt="9"/><br />
+<br>
+<br>
 
 <h2>Step 2: Installing Active Directory</h2>
 
-Now time to Install Active Directory. Go to the Domain Controller. In "Server Manager" click on "Add roles and features."
+Now it's time to install **Active Directory**.<br>
+Go to the Domain Controller and in *Server Manager* click on *Add roles and features*.
 
-<img src="https://i.imgur.com/0BcdJpW.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5c47459b-596d-4b61-a7ba-820a37bc50e8" height="80%" width="80%" alt="9"/><br />
+<br>
 
-Click "Next" until reaching the "Server Roles" section. Now, check the box next to "Active Directory Domain Services" then "Add Features."
+Click *Next* until reaching the *Server Roles* section.<br>
+Check the box next to *Active Directory Domain Services* then *Add Features*.
 
-<img src="https://i.imgur.com/K5oTmkD.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5a62a3a5-9570-4eef-af9f-36f97764d09f" height="80%" width="80%" alt="9"/><br />
+<br>
 
-Click Next until reaching the "Confirmation" tab then click "Install." It may take a while to install. Once it says "Configuration required. Installation succeeded on (Your DC name here). Click "Close"
+Click *Next* until reaching the *Confirmation* tab then click *Install*.<br>
+It may take a while to install.<br>
+<br>
+Once it says =*Configuration required. Installation succeeded on (**Your DC name here**)*= 🡪 Click *Close*<br>
+<br>
+Towards the top-right corner of the *Server Manage*r window, there will be a flag and a yellow triangle with a ⚠️ symbol 🡪 Click on that.<br>
+Then click on "*Promote the server to a domain controller*".
 
-Towards the top-right corner of the Server Manager window, there will be a flag and a yellow triangle with a "!" symbol. Click on that then "Promote the server to a domain controller"
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a067d615-f065-479a-97ef-65a23609406d" height="40%" width="40%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/D8p1wU9.png" height="40%" width="40%" alt="9"/><br />
+A window will pop up for a **Configuration Wizard**.<br>
+Check the bubble ◉ next to "*Add a new forest*"<br>
+<br>
+After that give it a domain name (example in the image below) and then click *Next*.
 
-A window will pop up for a Configuration Wizard. Check the bubble next to "Add a new forest" then give it a domain (Example in image below) Click next.
-
-<img src="https://i.imgur.com/BefHqfW.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e1bfed73-b689-4cbf-a950-56f6ee5341e9" height="80%" width="80%" alt="9"/><br />
+<br>
 
 Give it a DSRM password (Required but wont be used in this tutorial) Click next.
 
