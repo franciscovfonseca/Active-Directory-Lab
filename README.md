@@ -171,7 +171,7 @@ Check the box next to *Active Directory Domain Services* then *Add Features*.
 Click *Next* until reaching the *Confirmation* tab then click *Install*.<br>
 It may take a while to install.<br>
 <br>
-Once it says =*Configuration required. Installation succeeded on (**Your DC name here**)*= 🡪 Click *Close*<br>
+Once it says "*Configuration required. Installation succeeded on (**Your DC name here**)*" 🡪 Click *Close*<br>
 <br>
 Towards the top-right corner of the *Server Manage*r window, there will be a flag and a yellow triangle with a ⚠️ symbol 🡪 Click on that.<br>
 Then click on "*Promote the server to a domain controller*".
@@ -187,25 +187,37 @@ After that give it a domain name (example in the image below) and then click *Ne
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e1bfed73-b689-4cbf-a950-56f6ee5341e9" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Give it a DSRM password (Required but wont be used in this tutorial) Click next.
+Give it a DSRM password (required but won't be used in this tutorial).<br>
+Click *Next*.
 
-<img src="https://i.imgur.com/TYXfTrJ.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/04a4531f-502e-493e-a7cd-2264ccad85d8" height="80%" width="80%" alt="9"/><br />
+<br>
 
-Next, the NETBIOS domain will be made. This may take a moment. Once it is made, Click next until reaching the "Prerequisites Check" tab. This process will take a moment. Now click "Install"
+Next, the **NetBIOS domain** will be made (this may take a while).<br>
 
-After Installing the VM will reboot. Once it is rebooted, Log back into the Domain Controller with the domain name and the username. Example below.
+Once it is made, click *Next* until reaching the **Prerequisites Check** tab, this process will take a moment.<br>
+Now click *Install*.
 
-<img src="https://i.imgur.com/nT5uFiT.png" height="55%" width="55%" alt="9"/><br />
+After Installing, the VM will rebooted.<br>
+Once it is rebooted 🡪 Log back into the Domain Controller with the *Domain Name* and the *Username*.<br>
+<br>
+Example below:
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e597573e-b3fc-4d4e-b15a-5b7bd4a29f25" height="55%" width="55%" alt="9"/><br />
+<br>
 
 <h2>Step 3: Creating a Domain Admin</h2>
 
-Once logged in, using Server Manager click on tools in the top-right corner. Next click on "Active Directory Users and Computers."
+Once logged in: using Server Manager 🡪 click on **Tools** in the top-right corner.<br>
+Then click on ***Active Directory Users and Computers***.
 
-<img src="https://i.imgur.com/grdGvPg.png" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/6996f0fa-6cb3-4f8a-9238-6e5e36739787" height="70%" width="70%" alt="9"/><br />
+<br>
 
-In the Domain container, create a new "Organizational Unit"
+In the *Domain Container* 🡪 Create a new **Organizational Unit**
 
-<img src="https://i.imgur.com/9DGmBMS.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5360528b-d298-45f1-84df-4c2782193a4b" height="80%" width="80%" alt="9"/><br />
+<br>
 
 Name the OU "_ADMINS", then click OK. In the "_ADMINS" tab, create a new "User"
 
