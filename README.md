@@ -127,7 +127,7 @@ ping 10.0.0.4 -t
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a9ac0069-9240-42ed-b61f-5606a900ec44" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Following this, its time to enable **ICMPv4**.<br>
+Following this, it's time to enable **ICMPv4**.<br>
 
 First, login to the Domain Controller VM then open ***Windows Defender Firewall with Advanced Security***.
 
