@@ -205,6 +205,7 @@ Example below:
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e597573e-b3fc-4d4e-b15a-5b7bd4a29f25" height="55%" width="55%" alt="9"/><br />
 <br>
+<br>
 
 <h2>Step 3: Creating a Domain Admin</h2>
 
