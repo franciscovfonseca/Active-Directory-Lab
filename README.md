@@ -351,21 +351,37 @@ Example below:
 The VM will now restart after a short period.
 <br>
 <br>
+<br>
 
 
 <h2>Step 5: Setting up Remote Connection for Domain Users</h2>
 
-Now, log into the Domain Controller. Go back to Server Manager>Tools>Active Directory Users and Computers. Under the Domain container, go to the "Computers" tab. It should show that the client has been added to the list.
+Now, log into the Domain Controller.
 
-<img src="https://i.imgur.com/TT1JXxR.png" height="80%" width="80%" alt="9"/><br />
+Go back to **Server Manager 🡪 Tools 🡪 Active Directory Users and Computers**.
 
-Now, log into the Client as the admin user created and go to System Settings>Remote Desktop. Click on "Select users that can remotely access this PC" Next click Add.
+Under the Domain container, go to the **Computers** tab: it should show that the client has been added to the list.
 
-<img src="https://i.imgur.com/oKxoprK.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/78e35fd9-c8b1-4ff2-9d92-d259697b033b" height="80%" width="80%" alt="9"/><br />
+<br>
 
-In the box at the bottom, type in "Domain Users" and Check Names. Next click OK.
+Now, log into the **Client** as the *Admin User* created and go to **System Settings 🡪 Remote Desktop**.
 
-<img src="https://i.imgur.com/JXijlI7.png" height="60%" width="60%" alt="9"/><br />
+Click on ***Select users that can remotely access this PC***.
+
+Next click ***Add***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/72f37e50-337d-4f5c-a849-c5d0745c3097" height="80%" width="80%" alt="9"/><br />
+<br>
+
+In the box at the bottom: type in "***Domain Users***" and click on ***Check Names***.
+
+Next click ***OK***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/38b39f41-9ebf-4df2-a887-ae0dcc81ee6a" height="60%" width="60%" alt="9"/><br />
+<br>
+<br>
+<br>
 
 <h2>Step 6: Creating Domain Users</h2>
 
