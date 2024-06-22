@@ -95,12 +95,15 @@ Click *Next* until reaching the **Networking tab**.<br>
 
 Finally ***Review and Create***.
 
+
 <h2></h2>
 <br />
 
-Now it's time to set the Domain Controller's NIC Private IP to **Static**<br>
 
-Go to the Domain Controller and click on the **Networking** tab.<br>
+Now it's time to set the Domain Controller's NIC Private IP to **Static**
+
+Go to the Domain Controller and click on the **Networking** tab.
+
 After that, click on the *Network Interface*.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e702cc27-b53c-42af-b002-3a7ca8322992" height="60%" width="60%" alt="9"/><br />
@@ -111,7 +114,8 @@ Now, go the **IP configurations** tab and click on the IP configuration.
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/2d248eb4-13d7-42de-9945-1aa600fdae1d" height="60%" width="60%" alt="9"/><br />
 <br />
 
-Now, change the *Allocation* from **Dynamic** to **Static**.<br>
+Now, change the *Allocation* from **Dynamic** to **Static**.
+
 Then click ***Save***.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8d3b0db5-68cc-4626-a552-f62aac7574a7" height="60%" width="60%" alt="9"/><br />
@@ -124,7 +128,8 @@ After that, using the **User** and **Password** created before, login to the Cli
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/3b7d7c7d-c71f-4056-bccd-3999bdd4dc3d" height="55%" width="55%" alt="9"/><br />
 <br>
 
-Then, using **Command Prompt**, ping the Domain Controller with its Private IP Address.<br>
+Then, using **Command Prompt**, ping the Domain Controller with its Private IP Address.
+
 Type in ***ping (Your DC Private IP) -t*** to perpetually ping.<br>
 
 For now it will time out.
@@ -144,7 +149,8 @@ First, login to the Domain Controller VM then open ***Windows Defender Firewall 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d42ded65-aee3-4e87-bc61-a7b2b3050e50" height="85%" width="85%" alt="9"/><br />
 <br>
 
-Click on **Inbound Rules** and Sort by **Protocol**.<br>
+Click on **Inbound Rules** and Sort by **Protocol**.
+
 Look for the rules with ***Core Networking Diagnostics - ICMP Echo Request(ICMPv4-In)***.<br>
 
 There will be two of them *(Both at the bottom of the image below)*
@@ -157,7 +163,8 @@ Right-click and **Enable** both rules.<br>
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/83a47889-6fc4-40ec-aa6d-082ea4620238" height="55%" width="55%" alt="9"/><br />
 <br>
 
-Now go back to the **Client VM** and check on the *Command Prompt*.<br>
+Now go back to the **Client VM** and check on the *Command Prompt*.
+
 This time it should be properly pinging the Domain Controller.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/51bbc494-db1e-41c1-9f4c-6a84d55585b0" height="80%" width="80%" alt="9"/><br />
@@ -166,30 +173,35 @@ This time it should be properly pinging the Domain Controller.
 
 <h2>Step 2: Installing Active Directory</h2>
 
-Now it's time to install **Active Directory**.<br>
+Now it's time to install **Active Directory**.
+
 Go to the Domain Controller and in *Server Manager* click on *Add roles and features*.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5c47459b-596d-4b61-a7ba-820a37bc50e8" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Click *Next* until reaching the *Server Roles* section.<br>
+Click *Next* until reaching the *Server Roles* section.
+
 Check the box next to *Active Directory Domain Services* then *Add Features*.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5a62a3a5-9570-4eef-af9f-36f97764d09f" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Click *Next* until reaching the *Confirmation* tab then click *Install*.<br>
+Click *Next* until reaching the *Confirmation* tab then click *Install*.
+
 It may take a while to install.<br>
 <br>
 Once it says "*Configuration required. Installation succeeded on (**Your DC name here**)*" 🡪 Click *Close*<br>
 <br>
-Towards the top-right corner of the *Server Manage*r window, there will be a flag and a yellow triangle with a ⚠️ symbol 🡪 Click on that.<br>
+Towards the top-right corner of the *Server Manage*r window, there will be a flag and a yellow triangle with a ⚠️ symbol 🡪 Click on that.
+
 Then click on "*Promote the server to a domain controller*".
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a067d615-f065-479a-97ef-65a23609406d" height="40%" width="40%" alt="9"/><br />
 <br>
 
-A window will pop up for a **Configuration Wizard**.<br>
+A window will pop up for a **Configuration Wizard**.
+
 Check the bubble ◉ next to "*Add a new forest*"<br>
 <br>
 After that give it a domain name (example in the image below) and then click *Next*.
@@ -197,7 +209,8 @@ After that give it a domain name (example in the image below) and then click *Ne
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e1bfed73-b689-4cbf-a950-56f6ee5341e9" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Give it a DSRM password (required but won't be used in this tutorial).<br>
+Give it a DSRM password (required but won't be used in this tutorial).
+
 Click *Next*.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/04a4531f-502e-493e-a7cd-2264ccad85d8" height="80%" width="80%" alt="9"/><br />
@@ -205,10 +218,12 @@ Click *Next*.
 
 Next, the **NetBIOS domain** will be made (this may take a while).<br>
 
-Once it is made, click *Next* until reaching the **Prerequisites Check** tab, this process will take a moment.<br>
+Once it is made, click *Next* until reaching the **Prerequisites Check** tab, this process will take a moment.
+
 Now click *Install*.
 
-After Installing, the VM will rebooted.<br>
+After Installing, the VM will rebooted.
+
 Once it is rebooted 🡪 Log back into the Domain Controller with the *Domain Name* and the *Username*.<br>
 <br>
 Example below:
