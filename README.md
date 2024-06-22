@@ -6,25 +6,31 @@
 
 
 <h2>Description</h2>
-In this lab, we'll create two VMs in the same VNET - one as a Domain Controller (DC) with a static IP offering Active Directory services, and the other as a Client machine.
-</p>
-The client will join the domain, and its DNS settings will be configured to use the DC as the primary DNS server.
 
-The project involves establishing an Active Directory system for centralized user credential oversight and network traffic management.
+In this lab, we'll create two **Virtual Machines** in the same Virtual Network:
+- One as a **Domain Controller (DC)** with a static IP offering *Active Directory* services.
+- And the other one as a **Client** machine.
+
+The Client will join the domain, and its DNS settings will be configured to use the DC as the primary DNS server.
+
+The project involves establishing an **Active Directory** system for centralized user credential oversight and **Network Traffic Management**.
 
 By routing all internet traffic through the main server (Active Directory) via organization devices (Clients), administrators can monitor network activity and detect suspicious logs.
 
-Additionally, the project includes a PowerShell script to generate 1,000 users and showcases a device within the organization's domain, ensuring efficient management of user credentials and network traffic.
+Additionally, the project includes a **PowerShell** script to generate 1,000 users and showcases a device within the organization's domain, ensuring efficient management of user credentials and network traffic.
 <br />
 <br />
 
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+  🔹 Microsoft Azure (Virtual Machines/Compute)<br>
+  
+  🔹 Remote Desktop<br>
+  
+  🔹 Active Directory Domain Services<br>
+  
+  🔹 PowerShell<br>
 
 <br />
 
@@ -45,10 +51,11 @@ Additionally, the project includes a PowerShell script to generate 1,000 users a
 <h2>Step 1: Setup</h2>
 
 
-First, using Azure, create a Resource Group.<br>
-Then, create 2 Virtual Machines (VMs).<br>
+First, using Azure, create a *Resource Group*.
 
-One will be the **Domain Controller** and the other will be the **Client**.<br>
+Then, create 2 Virtual Machines (VMs).
+
+One will be the **Domain Controller** and the other will be the **Client**.
 
 To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before.
 
@@ -57,13 +64,15 @@ To create the Domain Controller, give the VM a name as well as assign it to the 
 <br />
 
 
-Now for the Image use **Windows Server 2022**.<br>
-It is recommended for the size to use 4 vcpus.
+Now for the Image use **Windows Server 2022**.
+
+Make sure to select at least 2 vcpus and 16 GiB memory.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
 
-Give the admin log in credentials that can be remembered or just write them down in notepad.<br>
+Give the admin log in credentials that can be remembered or just write them down in notepad.
+
 Then, click *Next* until reaching the **Networking** tab.<br>
 
 ⚠️ Take note of the Virtual Network created: This will be important when creating the Client VM.<br>
@@ -73,7 +82,8 @@ Check the box under Licensing then ***Review and Create*** the VM.
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a5dbd18a-2b7a-433e-b101-07302f503a49" height="70%" width="70%" alt="9"/><br />
 <br />
 
-Now, create the Client VM.<br>
+Now, create the Client VM.
+
 Same thing as the first one except the image should be using **Windows 10**.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d9d106da-540a-487f-8cfa-97bf3955945d" height="70%" width="70%" alt="9"/><br />
@@ -209,7 +219,8 @@ Example below:
 
 <h2>Step 3: Creating a Domain Admin</h2>
 
-Once logged in: using Server Manager 🡪 click on **Tools** in the top-right corner.<br>
+Once logged in: using Server Manager 🡪 click on **Tools** in the top-right corner.
+
 Then click on ***Active Directory Users and Computers***.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/6996f0fa-6cb3-4f8a-9238-6e5e36739787" height="70%" width="70%" alt="9"/><br />
@@ -220,30 +231,53 @@ In the *Domain Container* 🡪 Create a new **Organizational Unit**
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5360528b-d298-45f1-84df-4c2782193a4b" height="80%" width="80%" alt="9"/><br />
 <br>
 
-Name the OU "_ADMINS", then click OK. In the "_ADMINS" tab, create a new "User"
+Name the Organizational Unit: ***_ADMINS***, then click ***OK***.
 
-<img src="https://i.imgur.com/gUev6rr.png" height="80%" width="80%" alt="9"/><br />
+In the **_ADMINS** tab, create a *New* 🡪 *User*.
 
-Name this anything. Just remember the user and password. Uncheck the box that is next to "User must change password at next logon." This wont be necessary. Click next then click Finish.
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a66e8d6f-840f-4716-bc8c-aeda7c5f2650" height="80%" width="80%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/fmMKhNj.png" height="50%" width="50%" alt="9"/><br />
-<img src="https://i.imgur.com/S0c7T05.png" height="50%" width="50%" alt="9"/><br />
+Name this anything 🡪 Just remember the **User** and **Password**.
 
-Now add this user to the "Domain Admins" security group. Right-click on the user create, then click "Properties." Click on the "Members of" tab, then click "Add." 
+Uncheck the box ☐ that is next to "*User must change password at next logon*" 🡪 This won't be necessary.
 
-<img src="https://i.imgur.com/3MooGCr.png" height="50%" width="50%" alt="9"/><br />
+Click ***Next*** then click ***Finish***.
 
-Type "domain" in the box under "Enter the object names to select:" then click "Check Names" 
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/40b6ddcb-7051-4e1a-82c3-2e757b060590" height="50%" width="50%" alt="9"/><br />
 
-<img src="https://i.imgur.com/WnHnpsK.png" height="60%" width="60%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/23ffe8b0-95db-48ac-ba08-9f549e7a95b0" height="50%" width="50%" alt="9"/><br />
+<br>
 
-Choose the "Domain Admins" option then click OK
+Now add this User to the ***Domain Admins** security group*.
 
-<img src="https://i.imgur.com/eHOKSWT.png" height="80%" width="80%" alt="9"/><br />
+Right-click on the User created, then click ***Properties***.
 
-Now, click "Apply." The user has successfully been added to the Domain Admins security group. Click OK. Now logout of the Domain controller and re-log as the user just created.
+Click on the ***Members of*** tab, then click ***Add***. 
 
-<img src="https://i.imgur.com/oECi1Rd.png" height="50%" width="50%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/1186dab4-fb57-4377-b3e9-273f4e196417" height="50%" width="50%" alt="9"/><br />
+<br>
+
+Type ***domain*** in the box under "*Enter the object names to select*" 🡪 then click ***Check Names***. 
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/7afd3274-1173-43a3-ae2c-0768dfcb3c27" height="60%" width="60%" alt="9"/><br />
+<br>
+
+Choose the ***Domain Admins*** option then click ***OK***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/07778ba0-be50-4493-b5ad-f88f6125ae62" height="80%" width="80%" alt="9"/><br />
+<br>
+
+Now, click ***Apply***.
+
+✅ The User has successfully been added to the Domain Admins security group 🡪 click ***OK***.
+
+Now logout of the **Domain Controller** and re-login as the User just created.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/6a366cad-ec53-4439-acf3-5fd556203c0a" height="50%" width="50%" alt="9"/><br />
+<br>
+
+
 
 <h2>Step 4: Setting Client DNS Settings to Domain Controller Private IP Address</h2>
 
