@@ -165,7 +165,7 @@ Right-click and **Enable** both rules.<br>
 
 Now go back to the **Client VM** and check on the *Command Prompt*.
 
-This time it should be properly pinging the Domain Controller.
+✅ This time it should be properly pinging the Domain Controller.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/51bbc494-db1e-41c1-9f4c-6a84d55585b0" height="80%" width="80%" alt="9"/><br />
 <br>
@@ -336,12 +336,22 @@ Now Click on "***Change...***"
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/425dde87-0b5a-45f5-87f2-9eae099c65bd" height="50%" width="50%" alt="9"/><br />
 <br>
 
-Now check the bubble next to "Domain" then type in the domain name (Your own domain name). There should be window that pops up for a login. Use the admin previously created to login. Example below:
+Now check the bubble ⦿ next to ***Domain*** then type in the *Domain Name* (**Your own domain name**).
 
-<img src="https://i.imgur.com/nT3wd3q.png" height="80%" width="80%" alt="9"/><br />
-<img src="https://i.imgur.com/oVmTUG5.png" height="40%" width="40%" alt="9"/><br />
+There should be a window that pops up for a login 🡪 Use the admin previously created to login.
 
-Success. The VM will now restart after a short period.
+Example below:
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/697f46b6-b338-4e0a-a037-f14521d63f45" height="80%" width="80%" alt="9"/><br 
+                                                                                                                                                               
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a2dcdf55-a180-4731-9088-384dd8eb3cfb" height="40%" width="40%" alt="9"/><br />
+
+✅ Success.
+
+The VM will now restart after a short period.
+<br>
+<br>
+
 
 <h2>Step 5: Setting up Remote Connection for Domain Users</h2>
 
