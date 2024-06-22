@@ -130,7 +130,7 @@ After that, using the **User** and **Password** created before, login to the Cli
 
 Then, using **Command Prompt**, ping the Domain Controller with its Private IP Address.
 
-Type in ***ping (Your DC Private IP) -t*** to perpetually ping.<br>
+Type in "*ping (**Your DC Private IP**) -t*" to perpetually ping.<br>
 
 For now it will time out.
 
@@ -295,30 +295,46 @@ Now logout of the **Domain Controller** and re-login as the User just created.
 
 
 <h2>Step 4: Setting Client DNS Settings to Domain Controller Private IP Address</h2>
+<br>
 
-First, on Azure go to the Client VM. Next, go to the Networking tab and click on the Network Interface.
+First, in *Azure*, go to the **Client VM**.
 
-<img src="https://i.imgur.com/0jFQlMM.png" height="60%" width="60%" alt="9"/><br />
+Next, go to the **Networking** tab and click on the ***Network Interface***.
 
-Next, go to the "DNS Servers tab and create a custom DNS Server. Add a custom server using the Domain Controller's Private IP address. Example Below.
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/f721f2cd-57b4-4859-8d4f-ef7458fc836c" height="60%" width="60%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/DK1mOBp.png" height="60%" width="60%" alt="9"/><br />
+Next, go to the **DNS Servers** tab and create a ***custom DNS Server***.
 
-Now click "Save" Next go back to the Client and click "Restart in the "Overview" tab 
+Add a custom server using the *Domain Controller's Private IP address*.
 
-<img src="https://i.imgur.com/Cq7d1PZ.png" height="80%" width="80%" alt="9"/><br />
+Example Below:
 
-Once the Client is restarted, login to the client with Remote Desktop as the admin account created.
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/0bffe71f-6738-4262-8fbc-b7cfe1bcb396" height="60%" width="60%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/LkqUK6Q.png" height="50%" width="50%" alt="9"/><br />
+Now click ***Save***.
 
-Once logged in go to Settings>System>About and click on "Rename this PC(advanced)"
+Next go back to the **Client VM** and click ***Restart*** in the *Overview tab*. 
 
-<img src="https://i.imgur.com/1tu4Kwj.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a8b568af-86cc-483e-a80c-0bab61f249e2" height="80%" width="80%" alt="9"/><br />
+<br>
 
-Now Click on "Change..."
+Once the Client is restarted 🡪 Login to the Client with ***Remote Desktop*** as the **Admin Account** created.
 
-<img src="https://i.imgur.com/zKDbFIs.png" height="50%" width="50%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/7dc19edc-c69c-4b8b-9c84-4afea551f703" height="50%" width="50%" alt="9"/><br />
+<br>
+
+After login in:<br>
+Go to **Settings 🡪 System 🡪 About** and click on ***Rename this PC (advanced)***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/19aec300-b816-4a43-81d9-0b26828c90ab" height="80%" width="80%" alt="9"/><br />
+<br>
+
+Now Click on "***Change...***"
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/425dde87-0b5a-45f5-87f2-9eae099c65bd" height="50%" width="50%" alt="9"/><br />
+<br>
 
 Now check the bubble next to "Domain" then type in the domain name (Your own domain name). There should be window that pops up for a login. Use the admin previously created to login. Example below:
 
