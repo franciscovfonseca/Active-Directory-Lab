@@ -385,32 +385,50 @@ Next click ***OK***.
 
 <h2>Step 6: Creating Domain Users</h2>
 
-In the Domain Controller, open "Windows PowerShell ISE." Make sure to open it as Administrator. Click "New File" in the top left corner.
+In the Domain Controller, open "***Windows PowerShell ISE***".
 
-<img src="https://i.imgur.com/I3165Lu.png" height="85%" width="85%" alt="9"/><br />
-<img src="https://i.imgur.com/Y5BAh4S.png" height="80%" width="80%" alt="9"/><br />
+Make sure to open it as *Administrator*.
 
-Next, copy and paste the script from this link into the text editor. 
 
-https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1
 
-Choose "1_CREATE_USERS.ps1".
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/db4a5dde-f726-4ad9-9a5c-1c6db7097a4e" height="85%" width="85%" alt="9"/><br />
+<br>
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8dffa873-a847-44ad-97a3-111b41ce01eb" height="85%" width="85%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/m6N6m4j.png" height="80%" width="80%" alt="9"/><br />
+Next, download de ***Powershell file*** from the following link:
 
-Run "Set-ExecutionPolicy Unrestricted" in the command line.
+https://github.com/franciscovfonseca/Active-Directory-Powershell/blob/master/1_CREATE_USERS.ps1
+<br>
+<br>
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/f6a2db1f-23e6-4456-bb3f-25be58081e64" height="85%" width="85%" alt="9"/><br />
+<br>
+<br>
+
+After downloading the file, you want to open the script trough **Powershell** as shown in the images bellow:
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/9f3b3267-25f0-4b49-9b56-752fb8099a3f" height="85%" width="85%" alt="9"/><br />
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/0a5ab8ee-93ca-44a7-8c6d-e9d695ed1993" height="80%" width="80%" alt="9"/><br />
+<br>
+
+Run "***Set-ExecutionPolicy Unrestricted***" in the command line.
 
 ```commandline
 Set-ExecutionPolicy Unrestricted
 ```
+<br>
 
 <img src="https://i.imgur.com/xCzIjyZ.png" height="65%" width="65%" alt="9"/><br />
+<br>
 
 Change directory to script.
 
 ```commandline
 cd C:\Users\tsmith\Desktop\1_CREATE_USERS.psy
 ```
+<br>
 
 Now, click the Run button to run the script. This will start creating domain users with usernames and passwords (The Password for these users will be "Password1") Example below:
 
