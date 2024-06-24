@@ -64,9 +64,9 @@ To create the Domain Controller, give the VM a name as well as assign it to the 
 <br />
 
 
-Now for the Image use **Windows Server 2022**.
+Now for the Image: use **Windows Server 2022**.
 
-Make sure to select at least 2 vcpus and 16 GiB memory.
+Make sure to select at least *2 vcpus and 16 GiB memory*.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
@@ -91,7 +91,7 @@ Same thing as the first one except the image should be using **Windows 10**.
 
 Click *Next* until reaching the **Networking tab**.<br>
 
-➡️ Make sure the Virtual Network is the same as the one for the Domain Controller.<br>
+➡️ Make sure the **Resource Group** and the **Virtual Network** are the same as the one for the *Domain Controller*.<br>
 
 Finally ***Review and Create***.
 
