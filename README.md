@@ -396,7 +396,7 @@ Make sure to open it as *Administrator*.
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8dffa873-a847-44ad-97a3-111b41ce01eb" height="85%" width="85%" alt="9"/><br />
 <br>
 
-Next, download de ***Powershell file*** from the following link:
+Next, download de ***script*** from the following link:
 
 https://github.com/franciscovfonseca/Active-Directory-Powershell/blob/master/1_CREATE_USERS.ps1
 <br>
@@ -420,15 +420,26 @@ Set-ExecutionPolicy Unrestricted
 ```
 <br>
 
-<img src="https://i.imgur.com/xCzIjyZ.png" height="65%" width="65%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/5a6727cf-0dd6-40ff-871d-9157415d059a" height="65%" width="65%" alt="9"/><br />
 <br>
 
-Change directory to script.
+Before running the script, in order for us to be able to pull in the ***\names.txt***, we need to go to the actual directory where the script is at, and change it to make it work.
+
+So still in the command line 🡪 we type in the following script:
 
 ```commandline
 cd C:\Users\tsmith\Desktop\1_CREATE_USERS.psy
 ```
 <br>
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/c610feb5-81fb-4d51-98bb-bf3f606ed8a4" height="65%" width="65%" alt="9"/><br />
+<br>
+
+(*In the script above we typed in the **tsmith**, but it should be whatever user account we logged into.*)
+
+<br>
+
+In the script above we typed in the *tsmith*, but it should be whatever user account we logged into.
 
 Now, click the Run button to run the script. This will start creating domain users with usernames and passwords (The Password for these users will be "Password1") Example below:
 
