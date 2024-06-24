@@ -452,14 +452,16 @@ Example below:
 
 Go to Server **Manager 🡪 Tools 🡪 Active Directory Users and Computers**.
 
-Under the ***_EMPLOYEES*** tab, look at all of the users created from the script.
+Under the ***_USERS*** tab, look at all of the users created from the script.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/f0c344b1-d1c2-4683-a20b-91bcb41e8704" height="80%" width="80%" alt="9"/><br />
-<br>
 
 These names are all randomly generated.
 
+
 Choose one and log into the **Client VM** with the username it is assigned: (Remember the password is ***Password1***)
+<br>
+<br>
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/7c836b5e-e5d7-4239-a388-c512e5175446" height="50%" width="50%" alt="9"/><br />
 <br>
@@ -467,8 +469,19 @@ Choose one and log into the **Client VM** with the username it is assigned: (Rem
 ✅ **Congrats! You completed this tutorial**.
 <br>
 <br>
+<br>
 
 <h2>Conclusion</h2>
 
-Active Directory is crucial for organizations to effectively control their network traffic and prevent unauthorized access to internal networks or leakage of information to external parties. Understanding and learning about Active Directory is a fundamental principle for all IT professionals, regardless of their specific roles. Hope you found this blog both informative and valuable.
+**Active Directory** is crucial for organizations to effectively *Control their Network Traffic* and *Prevent Unauthorized Access to Internal Networks* or *Leakage of Information to External Parties*.
+
+Understanding and learning about **Active Directory** is a fundamental principle for all IT professionals, regardless of their specific roles.
+
+Hope you found this tutorial both informative and valuable!
+<br>
+<br>
+<br>
+
+
+
 
