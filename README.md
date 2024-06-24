@@ -51,11 +51,11 @@ Additionally, the project includes a **PowerShell** script to generate 1,000 use
 <h2>Step 1: Setup</h2>
 
 
-First, using Azure, create a *Resource Group*.
+First, using Azure, create a **Resource Group**.
 
-Then, create 2 Virtual Machines (VMs).
+Then, create 2 **Virtual Machines** (VMs).
 
-One will be the **Domain Controller** and the other will be the **Client**.
+One will be the ***Domain Controller*** and the other will be the ***Client***.
 
 To create the Domain Controller, give the VM a name as well as assign it to the Resource Group created before.
 
