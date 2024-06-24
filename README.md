@@ -432,29 +432,41 @@ cd C:\Users\tsmith\Desktop\1_CREATE_USERS.psy
 ```
 <br>
 
-<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/c610feb5-81fb-4d51-98bb-bf3f606ed8a4" height="65%" width="65%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/b0a49b5a-20b7-42dd-9a67-092faec71461" height="65%" width="65%" alt="9"/><br />
+
+(*In this case above we typed in **tsmith**, but it should be whatever user account we logged into.*)
+
 <br>
 
-(*In the script above we typed in the **tsmith**, but it should be whatever user account we logged into.*)
 
+
+Now click the **Run** button to *run the script*.
+
+This will start creating *Domain Users* with **Usernames** and **Passwords** (The Password for these users will be "Password1").
+
+Example below:
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d3c053ba-6310-4766-a6dc-381404c083f9" height="65%" width="65%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/668e20b8-faa8-456a-b3d2-9d37f2486590" height="80%" width="80%" alt="9"/><br />
 <br>
 
-In the script above we typed in the *tsmith*, but it should be whatever user account we logged into.
+Go to Server **Manager 🡪 Tools 🡪 Active Directory Users and Computers**.
 
-Now, click the Run button to run the script. This will start creating domain users with usernames and passwords (The Password for these users will be "Password1") Example below:
+Under the ***_EMPLOYEES*** tab, look at all of the users created from the script.
 
-<img src="https://i.imgur.com/IN8xvda.png" height="65%" width="65%" alt="9"/><br />
-<img src="https://i.imgur.com/RMyC0Co.png" height="80%" width="80%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/f0c344b1-d1c2-4683-a20b-91bcb41e8704" height="80%" width="80%" alt="9"/><br />
+<br>
 
-Go to Server Manager>Tools>Active Directory Users and Computers. Under the "_EMPLOYEES" tab, look at all of the users created from the script.
+These names are all randomly generated.
 
-<img src="https://i.imgur.com/f2xPlao.png" height="80%" width="80%" alt="9"/><br />
+Choose one and log into the **Client VM** with the username it is assigned: (Remember the password is ***Password1***)
 
-These names are all randomly generated. Choose one and log into the Client VM with the username it is assigned. (Remember the password is "Password1)
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/7c836b5e-e5d7-4239-a388-c512e5175446" height="50%" width="50%" alt="9"/><br />
+<br>
 
-<img src="https://i.imgur.com/LoWC3Er.png" height="50%" width="50%" alt="9"/><br />
-
-Congrats! You completed this tutorial.
+✅ **Congrats! You completed this tutorial**.
+<br>
+<br>
 
 <h2>Conclusion</h2>
 
