@@ -125,7 +125,7 @@ Then click ***Save***.
 
 After that, using the **User** and **Password** created before, login to the Client with its IP address in **Remote Desktop Connection**. 
 
-<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/3b7d7c7d-c71f-4056-bccd-3999bdd4dc3d" height="55%" width="55%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/44d9cfa3-7e43-4d67-a605-8f38414731dd" height="55%" width="55%" alt="9"/><br />
 <br>
 
 Then, using **Command Prompt**, ping the Domain Controller with its Private IP Address.
